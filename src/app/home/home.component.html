@@ -1,5 +1,9 @@
 <div class="weather-field">
   <div *ngFor="let weather of weathers">
     {{weather.temperatureCelsius}}
+    <div>
+      <button (click)="comparison.addToList(weather)">Enter</button>
+    </div>
   </div>
 </div>
+<app-comparison></app-comparison>

@@ -18,6 +18,14 @@ nav {
   }
 }
 
+.comparison {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
 ul {
   list-style-type: none;
 }

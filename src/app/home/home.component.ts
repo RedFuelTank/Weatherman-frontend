@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Weather} from "../model/Weather";
 import {WeatherService} from "../weather/weather.service";
+import {ComparisonComponent} from "../comparison/comparison.component";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import {WeatherService} from "../weather/weather.service";
 export class HomeComponent implements OnInit {
   public weathers!: Weather[];
 
-  constructor(private service: WeatherService) { }
+  constructor(private service: WeatherService, public comparison: ComparisonComponent) { }
 
   ngOnInit(): void {
     this.loadWeathers()
@@ -18,8 +19,7 @@ export class HomeComponent implements OnInit {
 
   public loadWeathers() {
     this.weathers = [];
-    this.service.getWeathers().subscribe(weather => this.weathers = weather)
-    console.log('home')
+    this.service.getWeathers(59.436962,24.753574).subscribe(weather => this.weathers = weather)
   }
 
 }

@@ -10,7 +10,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeathers() {
-    return this.http.get<Weather[]>(WeatherService.REST_API_PATH + '/weather' + '/1?lat=1&lon=1')
+  getWeathers(lat: Number, lon: Number) {
+    return this.http.get<Weather[]>(WeatherService.REST_API_PATH + '/weather' + `?lat=${lat}&lon=${lon}`)
   }
 }
