@@ -9,3 +9,15 @@ nav {
     justify-content: space-between;
   }
 }
+
+.weather-field {
+  display: flex;
+
+  > div {
+    margin: 0.5em;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
