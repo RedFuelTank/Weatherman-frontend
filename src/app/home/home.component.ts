@@ -21,5 +21,4 @@ export class HomeComponent implements OnInit {
     this.weathers = [];
     this.service.getWeathers(59.436962,24.753574).subscribe(weather => this.weathers = weather)
   }
-
 }

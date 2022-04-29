@@ -1,0 +1,10 @@
+.weather-field {
+  display: flex;
+
+  > div {
+    margin: 0.5em;
+    padding: 10em;
+    border: 1px gray solid;
+  }
+}
+

@@ -6,7 +6,8 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {ProfileComponent} from './profile/profile.component';
 import {HttpClientModule} from "@angular/common/http";
-import { ComparisonComponent } from './comparison/comparison.component';
+import {ComparisonComponent} from './comparison/comparison.component';
+import {ComparisonTableComponent} from './comparison/comparison-table/comparison-table.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ComparisonComponent } from './comparison/comparison.component';
     HomeComponent,
     ProfileComponent,
     ComparisonComponent,
+    ComparisonTableComponent,
   ],
   imports: [
     BrowserModule,

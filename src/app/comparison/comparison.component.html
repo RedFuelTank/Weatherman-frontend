@@ -1,5 +1,8 @@
-<div class="comparison">
+<div class="comparison" *ngIf="this.comparisonList.length > 0">
   <div *ngFor="let element of comparisonList">
     {{element.temperatureCelsius}}
+  </div>
+  <div>
+    <button (click)="compare()">Compare</button>
   </div>
 </div>

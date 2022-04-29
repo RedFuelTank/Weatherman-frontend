@@ -1,31 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #ff6961;
+}
+
 body {
+  background: #f2f2f2;
   margin: 0;
-}
-
-nav {
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.weather-field {
-  display: flex;
-
-  > div {
-    margin: 0.5em;
-  }
-}
-
-.comparison {
-  display: flex;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
 }
 
 ul {
   list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
