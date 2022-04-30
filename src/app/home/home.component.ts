@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Weather} from "../model/Weather";
-import {WeatherService} from "../weather/weather.service";
-import {ComparisonComponent} from "../comparison/comparison.component";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +6,8 @@ import {ComparisonComponent} from "../comparison/comparison.component";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public weathers!: Weather[];
 
-  constructor(private service: WeatherService, public comparison: ComparisonComponent) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.loadWeathers()
-  }
-
-  public loadWeathers() {
-    this.weathers = [];
-    this.service.getWeathers(59.436962,24.753574).subscribe(weather => this.weathers = weather)
-  }
+  ngOnInit(): void {}
 }

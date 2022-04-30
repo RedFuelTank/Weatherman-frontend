@@ -8,6 +8,9 @@ import {ProfileComponent} from './profile/profile.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ComparisonComponent} from './comparison/comparison.component';
 import {ComparisonTableComponent} from './comparison/comparison-table/comparison-table.component';
+import {GoogleMapsModule} from "@angular/google-maps";
+import {MapComponent} from "./map/map.component";
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import {ComparisonTableComponent} from './comparison/comparison-table/comparison
     ProfileComponent,
     ComparisonComponent,
     ComparisonTableComponent,
+    MapComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
