@@ -11,6 +11,9 @@ import {ComparisonTableComponent} from './comparison/comparison-table/comparison
 import {GoogleMapsModule} from "@angular/google-maps";
 import {MapComponent} from "./map/map.component";
 import { WeatherComponent } from './weather/weather.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { WeatherComponent } from './weather/weather.component';
     ComparisonComponent,
     ComparisonTableComponent,
     MapComponent,
-    WeatherComponent
+    WeatherComponent,
+    RegistrationFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
