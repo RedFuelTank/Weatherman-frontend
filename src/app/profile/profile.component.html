@@ -1,10 +1,11 @@
 <div class="container">
-  <button (click)="loadSavedForecasts()">Compare saved forecasts with new forecast</button>
+  <button (click)="loadSavedForecasts()">Show saved forecasts</button>
   <div class="table">
     <div *ngFor="let forecast of weatherForecasts">
       <div *ngFor="let weather of forecast.weathers">
         <a>{{weather.temperatureCelsius}}</a>
       </div>
+      <button>Choose</button>
     </div>
   </div>
 </div>
