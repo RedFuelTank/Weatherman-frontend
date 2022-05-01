@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable} from "rxjs";
-import {LoginRequest} from "./model/login-request";
-import {LoginResponse} from "./model/login-response";
+import {LoginRequest} from "../../model/login-request";
+import {LoginResponse} from "../../model/login-response";
 import {map} from "rxjs/operators";
 import {UserService} from "./user.service";
 

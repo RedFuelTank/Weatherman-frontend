@@ -11,10 +11,10 @@ import {ComparisonTableComponent} from './comparison/comparison-table/comparison
 import {GoogleMapsModule} from "@angular/google-maps";
 import {MapComponent} from "./map/map.component";
 import { WeatherComponent } from './weather/weather.component';
-import { RegistrationFormComponent } from './registration-form/registration-form.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { RegistrationFormComponent } from './authentication/registration-form/registration-form.component';
+import { LoginFormComponent } from './authentication/login-form/login-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {JwtInterceptor} from "./jwt.interceptor";
+import {JwtInterceptor} from "./shared/jwt.interceptor";
 
 @NgModule({
   declarations: [
