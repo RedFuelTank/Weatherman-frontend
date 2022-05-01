@@ -13,4 +13,8 @@ export class ComparisonTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  save() {
+    this.service.saveToDB();
+  }
+
 }
