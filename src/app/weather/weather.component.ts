@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {WeatherService} from "./service/weather.service";
 import {ComparisonComponent} from "../comparison/comparison.component";
 import {Weather} from "../model/Weather";
@@ -18,7 +18,6 @@ export class WeatherComponent implements OnInit {
   }
 
   public loadDefaultWeathers() {
-    console.log(1)
     this.weathers = [];
     this.service.getWeathers(59.436962,24.753574).subscribe(weather => this.weathers = weather)
   }

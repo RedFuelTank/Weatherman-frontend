@@ -3,7 +3,11 @@
   width="100%"
   [zoom]="zoom"
   [options]="options"
-></google-map>
+>
+  <map-marker [position]="marker.position"
+
+  ></map-marker>
+</google-map>
 
 <!-- Use custom zoom buttons -->
 <button (click)="zoomIn()">Zoom in</button>

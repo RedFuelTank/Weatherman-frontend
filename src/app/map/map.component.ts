@@ -1,5 +1,4 @@
-import {Component, OnInit, ViewChild, Output, EventEmitter} from '@angular/core';
-import {HomeComponent} from "../home/home.component";
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 
 @Component({
@@ -9,6 +8,7 @@ import {HomeComponent} from "../home/home.component";
 })
 export class MapComponent implements OnInit {
   @Output() dataToSibling = new EventEmitter<any> ();
+  marker = {position: {lat: 59.436962, lng: 24.753574}}
 
   zoom = 12
   options: google.maps.MapOptions = {
@@ -31,6 +31,10 @@ export class MapComponent implements OnInit {
         lat: position.coords.latitude,
         lng: position.coords.longitude,
       }
+      this.marker.position = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
     })
   }
 
@@ -44,6 +48,11 @@ export class MapComponent implements OnInit {
 
   click(event: google.maps.MapMouseEvent) {
     let data = {lat: event.latLng?.lat(), lon: event.latLng?.lng()}
+    this.marker.position = {
+      lat: (data.lat) ? data.lat : 0,
+      lng: (data.lon) ? data.lon : 0
+    }
+
     this.dataToSibling.emit(data)
   }
 }
