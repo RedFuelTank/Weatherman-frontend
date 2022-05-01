@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Weather} from "../../model/Weather";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {WeatherForecast} from "../../model/weather-forecast";
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,9 @@ export class ComparisonService {
     console.log("added")
     let data = JSON.stringify({series: this.comparisonList})
     this.http.post<any>(ComparisonService.REST_API_SERVER + "/comparison", data, this.httpOptions).subscribe()
+  }
+
+  getWeatherForecasts() {
+    return this.http.get<WeatherForecast[]>(ComparisonService.REST_API_SERVER + "/comparison")
   }
 }
